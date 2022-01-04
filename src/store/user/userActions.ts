@@ -19,7 +19,7 @@ export const signin = createAsyncThunk(
   'user/signin',
   async ({ email, password }: SigninInfo) => {
     await signInWithEmailAndPassword(auth, email, password)
-  }
+  },
 )
 
 export const signup = createAsyncThunk(
@@ -28,11 +28,11 @@ export const signup = createAsyncThunk(
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       email,
-      password
+      password,
     )
     const { user } = userCredential
     if (displayName) updateProfile(user, { displayName })
-  }
+  },
 )
 
 export const signout = createAsyncThunk('user/signout', async () => {
@@ -43,7 +43,7 @@ export const forgotPassword = createAsyncThunk(
   'user/forgotPassword',
   async (email: string) => {
     await sendPasswordResetEmail(auth, email)
-  }
+  },
 )
 
 export const googleSignin = createAsyncThunk('user/googleSignin', async () => {
