@@ -15,7 +15,7 @@ const Badge = ({ children, size = 'md' }: IBadgeProps) => {
   return (
     <Link href='/'>
       <a
-        className={`transition-all flex items-center justify-center duration-300 bg-gray-200 rounded-full hover:bg-gray-300 ${sizeCls[size]}`}
+        className={`transition-all inline-flex items-center justify-center duration-300 bg-gray-200 rounded-full hover:bg-gray-300 ${sizeCls[size]}`}
       >
         {children}
       </a>
