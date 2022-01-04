@@ -39,7 +39,8 @@ module.exports = {
         extensions: ['tsx'],
       },
     ],
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -60,5 +61,15 @@ module.exports = {
     'import/no-cycle': 'off',
     'react/require-default-props': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/label-has-associated-control': 'warn',
+    'import/order': 'warn',
   },
+  overrides: [
+    {
+      files: ['*stories.tsx'],
+      rules: {
+        'react/jsx-props-no-spreading': 'off',
+      },
+    },
+  ],
 }
